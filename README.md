@@ -1,6 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-# PPID Dispora Jabar Portfolio
+# KP-PPID: PPID Dispora Jabar Portfolio
 
 ## Project Description
 This is a modern portfolio website for PPID (Pejabat Pengelola Informasi dan Dokumentasi) Dispora Jabar built with Laravel. It features a responsive design with modern UI elements, animations, and a full-featured admin panel to control all content.
@@ -49,3 +49,4 @@ For deployment instructions, please refer to the [DEPLOYMENT_GUIDE.md](./DEPLOYM
 - Animate.css & WOW.js
 - Owl Carousel
 - Lightbox
+
