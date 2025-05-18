@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Project to GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+        }
+        .step {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+        }
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Your PPID Dispora Jabar Portfolio to GitHub</h1>
+    
+    <p>Follow these steps to upload your portfolio project to GitHub. This guide will help you create a new repository and push your code to it.</p>
+    
+    <div class="step">
+        <h3>Step 1: Create a GitHub Account (if you don't have one)</h3>
+        <p>If you don't already have a GitHub account, create one at:</p>
+        <a href="https://github.com/join" target="_blank" class="button">Create GitHub Account</a>
+    </div>
+    
+    <div class="step">
+        <h3>Step 2: Create a New Repository on GitHub</h3>
+        <p>Once you're logged in to GitHub:</p>
+        <ol>
+            <li>Click the "+" icon in the top-right corner and select "New repository"</li>
+            <li>Name your repository (e.g., "ppid-portfolio")</li>
+            <li>Add a description (optional): "PPID Dispora Jabar Portfolio Website"</li>
+            <li>Keep it as a Public repository</li>
+            <li>Do NOT initialize with a README, .gitignore, or license</li>
+            <li>Click "Create repository"</li>
+        </ol>
+        <a href="https://github.com/new" target="_blank" class="button">Create New Repository</a>
+    </div>
+    
+    <div class="step">
+        <h3>Step 3: Open Command Prompt</h3>
+        <p>Open Command Prompt on your computer and navigate to your project directory:</p>
+        <pre>cd D:\ppidporto\Portfolio</pre>
+    </div>
+    
+    <div class="step">
+        <h3>Step 4: Initialize Git Repository</h3>
+        <p>Initialize a new Git repository in your project folder:</p>
+        <pre>git init</pre>
+    </div>
+    
+    <div class="step">
+        <h3>Step 5: Create .gitignore File</h3>
+        <p>Create a .gitignore file to exclude unnecessary files from your repository:</p>
+        <pre>copy nul .gitignore</pre>
+        <p>Then open the .gitignore file in a text editor and add the following content:</p>
+        <pre>/vendor/
+/node_modules/
+/.env
+/.env.backup
+/.phpunit.result.cache
+/Homestead.json
+/Homestead.yaml
+/npm-debug.log
+/yarn-error.log
+/.idea
+/.vscode
+/public/storage
+/storage/*.key
+</pre>
+    </div>
+    
+    <div class="step">
+        <h3>Step 6: Add Your Files to Git</h3>
+        <p>Add all your project files to the Git repository:</p>
+        <pre>git add .</pre>
+    </div>
+    
+    <div class="step">
+        <h3>Step 7: Commit Your Changes</h3>
+        <p>Commit your files with a descriptive message:</p>
+        <pre>git commit -m "Initial commit of PPID Dispora Jabar Portfolio"</pre>
+    </div>
+    
+    <div class="step">
+        <h3>Step 8: Add Remote Repository</h3>
+        <p>Link your local repository to your GitHub repository. Replace <code>YOUR_USERNAME</code> with your GitHub username and <code>REPOSITORY_NAME</code> with the name you gave your repository:</p>
+        <pre>git remote add origin https://github.com/YOUR_USERNAME/REPOSITORY_NAME.git</pre>
+    </div>
+    
+    <div class="step">
+        <h3>Step 9: Push to GitHub</h3>
+        <p>Push your code to GitHub:</p>
+        <pre>git push -u origin master</pre>
+        <p>You may be prompted to enter your GitHub username and password.</p>
+    </div>
+    
+    <div class="note">
+        <h3>Note on GitHub Authentication:</h3>
+        <p>GitHub no longer accepts password authentication from the command line. You'll need to use a personal access token instead of your password.</p>
+        <ol>
+            <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Personal Access Tokens</a></li>
+            <li>Click "Generate new token"</li>
+            <li>Give it a name (e.g., "Portfolio Upload")</li>
+            <li>Select the "repo" scope</li>
+            <li>Click "Generate token"</li>
+            <li>Copy the token (you won't be able to see it again)</li>
+            <li>Use this token instead of your password when prompted</li>
+        </ol>
+    </div>
+    
+    <div class="step">
+        <h3>Step 10: Verify Your Upload</h3>
+        <p>Go to your GitHub repository page to verify that your files have been uploaded successfully:</p>
+        <pre>https://github.com/YOUR_USERNAME/REPOSITORY_NAME</pre>
+    </div>
+    
+    <h2>Next Steps</h2>
+    
+    <p>After uploading your project to GitHub, you can:</p>
+    <ul>
+        <li>Enable GitHub Pages to host your static website</li>
+        <li>Share your repository link with others</li>
+        <li>Continue to update your code and push changes to GitHub</li>
+    </ul>
+    
+    <div class="note">
+        <h3>Need Help?</h3>
+        <p>If you encounter any issues during the upload process, refer to the <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo" target="_blank">GitHub documentation</a> or contact GitHub support.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[build]
+  command = "php artisan optimize && npm install && npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  PHP_VERSION = "8.1"
+  NODE_VERSION = "16"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.php"
+  status = 200
+  force = true
+
+[dev]
+  command = "php artisan serve"
+  port = 8000
+  targetPort = 8000
+  publish = "public"
+  autoLaunch = true
+  framework = "laravel"

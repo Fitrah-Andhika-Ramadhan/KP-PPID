@@ -6,7 +6,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,12 +15,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        
-        // \App\Models\User::factory(1)->create();
-
+        // Create default user
         \App\Models\User::factory()->create([
             'name' => 'Profile User',
             'email' => 'test@example.com',
+        ]);
+        
+        // Run the dummy data seeder
+        $this->call([
+            DummyDataSeeder::class,
         ]);
     }
 }

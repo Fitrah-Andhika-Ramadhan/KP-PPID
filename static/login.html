@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- This is a static version of the Laravel portfolio website -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Laravel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="PPID Dispora Jabar, Pejabat Pengelola Informasi dan Dokumentasi" name="keywords">
+    <meta content="Portal Resmi PPID Dinas Pemuda dan Olahraga Jawa Barat" name="description">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="a2krmZmgUS3XcTNRGRFalynhy33iRQvLARkxHHjl">
+
+    <!-- Favicon -->
+    <link href="http://localhost/import/assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="http://localhost/import/assets/lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="http://localhost/import/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="http://localhost/import/assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link href="http://localhost/import/assets/css/style.css" rel="stylesheet">
+    <link href="http://localhost/import/assets/css/modern-style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <div class="container">
+            <a href="" class="navbar-brand">
+                <h2 class="m-0"><span class="text-primary">PPID</span> DISPORA JABAR</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">Profile</a>
+                    <a href="#sources" class="nav-item nav-link">Informasi</a>
+                    <a href="#portfolios" class="nav-item nav-link">Gallery</a>
+                    <a href="#guestbook" class="nav-item nav-link">Buku Tamu</a>
+                    <a href="#permohonan_informasi" class="nav-item nav-link">Permohonan</a>
+                    <a href="#complaint" class="nav-item nav-link">Pengaduan</a>
+                </div>
+                <a href="http://localhost/login" class="btn btn-primary ms-3">Admin Login</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container" style="min-height: 100vh; display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+    <div class="col-md-6">
+        <div class="card shadow-lg rounded-lg border-0" style="overflow: hidden;">
+            <!-- Background Gradient -->
+            <div class="card-header text-center" style="background: linear-gradient(135deg, #6c63ff, #3f3d56); color: white;">
+                <h4 style="font-weight: bold; margin: 0;">Login</h4>
+            </div>
+
+            <div class="card-body p-5" style="position: relative; background: #ffffff; border-top: 5px solid #6c63ff;">
+                <div class="wave" style="position: absolute; top: -100px; left: -50px; width: 200px; height: 200px; background: rgba(108, 99, 255, 0.1); border-radius: 50%; transform: rotate(-30deg);"></div>
+                <div class="wave" style="position: absolute; bottom: -100px; right: -50px; width: 200px; height: 200px; background: rgba(108, 99, 255, 0.1); border-radius: 50%; transform: rotate(30deg);"></div>
+                
+                <form method="POST" action="http://localhost/login">
+                    <input type="hidden" name="_token" value="a2krmZmgUS3XcTNRGRFalynhy33iRQvLARkxHHjl" autocomplete="off">
+                    <div class="form-group mb-4">
+                        <label for="email" class="col-form-label">Email Address</label>
+                        <input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email" autofocus style="border: 1px solid #6c63ff; border-radius: 25px; padding: 12px 20px; transition: border-color 0.3s ease;">
+                        
+                                            </div>
+
+                    <div class="form-group mb-4">
+                        <label for="password" class="col-form-label">Password</label>
+                        <input id="password" type="password" class="form-control " name="password" required autocomplete="current-password" style="border: 1px solid #6c63ff; border-radius: 25px; padding: 12px 20px; transition: border-color 0.3s ease;">
+                        
+                                            </div>
+
+                    <div class="form-group mb-4">
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember"  style="margin-right: 10px;">
+                            <label class="form-check-label" for="remember">
+                                Remember Me
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-0">
+                        <button type="submit" class="btn btn-primary w-100" style="border-radius: 25px; padding: 12px 0; font-size: 16px; font-weight: bold; background: #6c63ff; border: none; transition: background-color 0.3s ease, transform 0.3s ease;">
+                            Login
+                        </button>
+                        <div class="text-center mt-4">
+                                                            <a class="btn btn-link" href="http://localhost/password/reset" style="color: #6c63ff; text-decoration: underline;">
+                                    Forgot Your Password?
+                                </a>
+                                                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://localhost/import/assets/lib/typed/typed.min.js"></script>
+    <script src="http://localhost/import/assets/lib/easing/easing.min.js"></script>
+    <script src="http://localhost/import/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="http://localhost/import/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="http://localhost/import/assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="http://localhost/import/assets/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="http://localhost/import/assets/lib/wow/wow.min.js"></script>
+
+    <!-- Custom Javascript -->
+    <script>
+        // Back to top button
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').addClass('active');
+            } else {
+                $('.back-to-top').removeClass('active');
+            }
+        });
+        
+        $('.back-to-top').click(function () {
+            $('html, body').animate({scrollTop: 0}, 800);
+            return false;
+        });
+
+        // Initialize WOW.js for animations
+        new WOW().init();
+        
+        // Active nav item
+        $('.navbar-nav .nav-link').click(function() {
+            $('.navbar-nav .nav-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+    
+    <!-- Template Javascript -->
+    <script src="http://localhost/import/assets/js/main.js"></script>
+<script src="static-form-handler.js"></script>
+</body>
+</html>

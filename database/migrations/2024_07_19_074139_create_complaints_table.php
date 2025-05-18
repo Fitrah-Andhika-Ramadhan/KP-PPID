@@ -10,6 +10,11 @@ class CreateComplaintsTable extends Migration
     {
         Schema::create('complaints', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('content');
+            $table->string('name');
+            $table->string('email');
+            $table->string('status')->default('Pending');
             $table->string('image')->nullable();
             $table->timestamps();
         });

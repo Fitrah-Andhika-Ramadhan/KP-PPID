@@ -1,5 +1,11 @@
 <?php
 
+// Register custom error handler to suppress deprecation notices
+if (file_exists(__DIR__.'/../app/Helpers/ErrorHandler.php')) {
+    require_once __DIR__.'/../app/Helpers/ErrorHandler.php';
+    \App\Helpers\ErrorHandler::register();
+}
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
