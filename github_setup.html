@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository Setup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .instructions {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .steps {
+            margin-top: 30px;
+        }
+        .step {
+            margin-bottom: 15px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Repository Setup</h1>
+    
+    <div class="instructions">
+        <p>To upload your PPID Dispora Jabar Portfolio to GitHub, you need to create a new repository and connect it to your local project.</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="github-username">Your GitHub Username:</label>
+        <input type="text" id="github-username" placeholder="e.g., johndoe">
+    </div>
+    
+    <div class="form-group">
+        <label for="repo-name">Repository Name:</label>
+        <input type="text" id="repo-name" value="ppid-portfolio" placeholder="e.g., ppid-portfolio">
+    </div>
+    
+    <a href="https://github.com/new" target="_blank" class="button">Create New GitHub Repository</a>
+    
+    <div class="note">
+        <p><strong>Important:</strong> When creating your repository on GitHub:</p>
+        <ul>
+            <li>Use the repository name you entered above</li>
+            <li>Make it Public</li>
+            <li>Do NOT initialize with README, .gitignore, or license</li>
+        </ul>
+    </div>
+    
+    <div class="steps">
+        <h2>After Creating Your Repository:</h2>
+        
+        <div class="step">
+            <p>1. Open Command Prompt and run these commands (replace USERNAME and REPO-NAME with your values):</p>
+            <code>cd D:\ppidporto\Portfolio</code><br>
+            <code>git remote add origin https://github.com/USERNAME/REPO-NAME.git</code><br>
+            <code>git push -u origin main</code>
+        </div>
+        
+        <div class="step">
+            <p>2. When prompted for credentials:</p>
+            <ul>
+                <li>Enter your GitHub username</li>
+                <li>For password, use a <a href="https://github.com/settings/tokens" target="_blank">Personal Access Token</a> (not your GitHub password)</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <p>3. Verify your repository was uploaded by visiting:</p>
+            <code>https://github.com/USERNAME/REPO-NAME</code>
+        </div>
+    </div>
+</body>
+</html>
